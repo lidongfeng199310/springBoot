@@ -28,7 +28,8 @@ public class Swagger2 {
                 .build();
     }
 
-    private ApiInfo apiInfo() {
+    @SuppressWarnings("deprecation")
+	private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("yn系统API接口")
                 .contact("yn")
