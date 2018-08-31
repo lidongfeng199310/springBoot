@@ -1,0 +1,44 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.4.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.yn.com'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+//生成的jar包包名和版本
+jar {
+    baseName = 'springBoot'
+    version =  '0.1.0'
+}
+
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	//swagger2
+	compile('io.springfox:springfox-swagger2:2.6.1')
+	//老版本ui
+	//compile('io.springfox:springfox-swagger-ui:2.6.1')
+	//别人改造ui
+	compile('com.github.xiaoymin:swagger-bootstrap-ui:1.6')
+	
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
