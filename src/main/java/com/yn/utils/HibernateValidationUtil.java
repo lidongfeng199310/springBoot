@@ -14,6 +14,8 @@ import javax.validation.ValidatorFactory;
  */
 public class HibernateValidationUtil {
 	
+	
+	
 	private static ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
 	private static Validator validator = validatorFactory.getValidator();
 	
