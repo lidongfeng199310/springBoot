@@ -1,5 +1,7 @@
 package com.yn.model;
 
+import javax.validation.constraints.NotNull;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiParam;
 
@@ -11,6 +13,7 @@ public class User extends BaseModel{
 	private Long id;   
 
 	@ApiParam(name="名字")
+	@NotNull(message = "名字不能为空")
 	private String name; //名字
 
 	@ApiParam(name="密码")
