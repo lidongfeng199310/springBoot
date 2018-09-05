@@ -2,7 +2,6 @@
 <!DOCTYPE xml>
 <configuration scan="true">
 
-    <property resource="logback.properties" />
     <property name="appName" value="yn"/>
     <property name="LOG_HOME" value="D:/var"/>
     <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{0}:%L%X{serialNo}- %msg%n"/>
